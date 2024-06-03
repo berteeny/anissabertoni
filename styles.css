@@ -1,0 +1,23 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.bckgrnd {
+  height: 1000px;
+  background-repeat: no-repeat;
+  background-image: radial-gradient(circle 500px at top, #222a2a, #181b1b);
+}
+
+h1 {
+  color: white;
+  margin-top: 0;
+  padding: 100px 0px 100px 200px;
+  font-size: 3.5rem;
+  font-weight: 500;
+}
+
+p {
+  color: white;
+  margin: 0;
+}
