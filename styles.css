@@ -1,23 +1,195 @@
 body {
   margin: 0;
-  font-family: "Poppins", sans-serif;
+  font-family: "Montserrat", sans-serif;
+  color: #f2f0ef;
+  line-height: 21px;
+  font-size: 14px;
 }
 
-.bckgrnd {
-  height: 1000px;
-  background-repeat: no-repeat;
-  background-image: radial-gradient(circle 500px at top, #222a2a, #181b1b);
+/* change all of your px to em and rem pls */
+h5 {
+  font-family: "Montserrat", sans-serif !important;
+  font-weight: 600;
 }
 
-h1 {
+a {
+  text-decoration: none;
+  color: rgb(246, 192, 202);
+}
+
+.flex {
+  display: flex;
+  justify-content: space-around;
+}
+
+.about-left {
+  width: 30%;
+
+  padding-left: 5rem;
+}
+
+.about-right {
+  width: 30%;
+  padding-right: 5rem;
+  font-size: 1rem;
+}
+
+/*
+dont forget to change all of the colors to hex codes
+*/
+
+/* header */
+header {
+  justify-content: space-between !important;
+  width: 100%;
+}
+
+.find-me {
   color: white;
-  margin-top: 0;
-  padding: 100px 0px 100px 200px;
-  font-size: 3.5rem;
-  font-weight: 500;
+  width: 11.5rem;
+  font-size: 1.25rem;
+  justify-content: space-between;
+  align-items: center;
+  padding-right: 1.5rem;
 }
 
-p {
-  color: white;
-  margin: 0;
+.find-icons {
+  gap: 10px;
+}
+
+.find-me-link {
+  width: 25px;
+}
+
+.logo {
+  width: 60px;
+  padding: 1.5rem;
+}
+
+button {
+  font-family: "Montserrat", sans-serif;
+  background-color: rgb(226, 176, 198);
+  height: 3rem;
+  width: 9rem;
+  border-radius: 7px;
+  border: none;
+  box-shadow: 15px 15px 3px #0f1c18;
+  margin: 2rem 0rem;
+}
+
+button:hover {
+  background-color: rgb(245, 183, 194);
+  cursor: pointer;
+}
+
+footer {
+  background-image: url("/images/clouds.png");
+  width: 100%;
+  height: 75px;
+}
+
+/* background colors */
+
+.grad-bg,
+.grad-bg-2 {
+  width: 100%;
+  height: 100vh;
+  padding-bottom: 3rem;
+  background-size: 300%;
+  animation: bg-animation 5s infinite alternate;
+  animation-play-state: paused;
+}
+
+.grad-bg {
+  background-image: linear-gradient(
+    100deg,
+    #102b21,
+    #152621,
+    #11211f,
+    #0d1f1d,
+    #080517,
+    #181b1b
+  );
+}
+
+.grad-bg-2 {
+  background-image: linear-gradient(
+    100deg,
+    #181b1b,
+    #080517,
+    #0d1f1d,
+    #11211f,
+    #152621,
+    #102b21,
+    #0f1c18
+  );
+}
+
+.grad-bg:hover,
+.grad-bg-2:hover {
+  animation-play-state: running;
+}
+
+/* animations */
+@keyframes bg-animation {
+  0% {
+    background-position: left;
+  }
+  100% {
+    background-position: right;
+  }
+}
+
+@keyframes bg-animation-2 {
+  0% {
+    background-position: right;
+  }
+  100% {
+    background-position: left;
+  }
+}
+
+/* scalability */
+
+@media (min-width: 1407px) {
+  .about-left,
+  .about-right {
+    height: 600px;
+  }
+}
+@media (min-width: 768px) and (max-width: 1406px) {
+  .about {
+    height: 80vh;
+  }
+}
+@media (min-width: 601px) {
+  .about-right {
+    overflow-y: scroll;
+  }
+}
+
+@media (max-width: 767px) {
+  .grad-bg,
+  .about-right {
+    height: auto;
+  }
+
+  .about {
+    flex-direction: column;
+    gap: 2rem;
+  }
+
+  .about-left,
+  .about-right {
+    padding: 2rem;
+    width: 80%;
+  }
+
+  h5 {
+    display: none;
+  }
+
+  .find-me {
+    width: 100px;
+  }
 }
