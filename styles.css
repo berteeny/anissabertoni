@@ -7,9 +7,15 @@ body {
 }
 
 /* change all of your px to em and rem pls */
-h5 {
-  font-family: "Montserrat", sans-serif !important;
+h5,
+h3,
+h1,
+h2 {
   font-weight: 600;
+}
+
+.about-right h3 {
+  text-align: center;
 }
 
 a {
@@ -24,19 +30,32 @@ a {
 
 .about-left {
   width: 30%;
-
   padding-left: 5rem;
 }
 
 .about-right {
   width: 30%;
   padding-right: 5rem;
-  font-size: 1rem;
 }
 
-/*
-dont forget to change all of the colors to hex codes
-*/
+.arrows {
+  justify-content: center !important;
+  gap: 5px;
+  padding-bottom: 1rem;
+}
+
+.projects-container {
+  flex-direction: column;
+  align-items: center;
+  gap: 6.5rem;
+}
+
+.project {
+  border: solid white 2px;
+  border-radius: 5px;
+  height: 165px;
+  width: 90%;
+}
 
 /* header */
 header {
@@ -45,7 +64,6 @@ header {
 }
 
 .find-me {
-  color: white;
   width: 11.5rem;
   font-size: 1.25rem;
   justify-content: space-between;
@@ -68,7 +86,7 @@ header {
 
 button {
   font-family: "Montserrat", sans-serif;
-  background-color: rgb(226, 176, 198);
+  background-color: #e2b0c6;
   height: 3rem;
   width: 9rem;
   border-radius: 7px;
@@ -78,7 +96,7 @@ button {
 }
 
 button:hover {
-  background-color: rgb(245, 183, 194);
+  background-color: #f5b7c2;
   cursor: pointer;
 }
 
@@ -86,6 +104,7 @@ footer {
   background-image: url("/images/clouds.png");
   width: 100%;
   height: 75px;
+  z-index: 1;
 }
 
 /* background colors */
@@ -149,25 +168,47 @@ footer {
   }
 }
 
-/* scalability */
+/* responsive media queries */
 
+/* laptop and up */
 @media (min-width: 1407px) {
   .about-left,
   .about-right {
     height: 600px;
   }
 }
-@media (min-width: 768px) and (max-width: 1406px) {
+
+/* large ipad */
+@media (min-width: 1024px) and (max-width: 1406px) {
   .about {
-    height: 80vh;
-  }
-}
-@media (min-width: 601px) {
-  .about-right {
-    overflow-y: scroll;
+    height: 800px;
   }
 }
 
+/* small ipads */
+@media (min-width: 768px) and (max-width: 1020px) {
+  .about {
+    height: 900px;
+  }
+
+  .project {
+    height: 125px;
+    width: 220px;
+  }
+}
+
+/* scroll exists on all sizes above cellular phone */
+@media (min-width: 601px) {
+  .about-right {
+    overflow-y: auto;
+  }
+
+  .about-right h3 {
+    margin-top: 3.5rem;
+  }
+}
+
+/* cellphones */
 @media (max-width: 767px) {
   .grad-bg,
   .about-right {
