@@ -111,6 +111,10 @@ a {
   padding: 0.5rem;
 }
 
+.title :hover {
+  cursor: default;
+}
+
 .title p {
   margin: 1rem;
 }
@@ -141,6 +145,17 @@ header {
   width: 60px;
   padding: 1.5rem;
 }
+
+/* projects scroll bar custom */
+.about-right::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.about-right::-webkit-scrollbar-thumb {
+  background-color: #0d1f1d;
+  border-radius: 7px;
+}
+/*  */
 
 button {
   font-family: "Montserrat", sans-serif;
