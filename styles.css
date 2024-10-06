@@ -159,7 +159,7 @@ header {
 
 /* projects scroll bar for firefox on windows */
 .about-right {
-  scrollbar-color: transparent #0d1f1d;
+  scrollbar-color: #0d1f1d transparent;
 }
 /*  */
 
