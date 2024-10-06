@@ -111,6 +111,10 @@ a {
   padding: 0.5rem;
 }
 
+.title :hover {
+  cursor: default;
+}
+
 .title p {
   margin: 1rem;
 }
@@ -142,6 +146,23 @@ header {
   padding: 1.5rem;
 }
 
+/* projects scroll bar custom for chrome/safari on mac and windows browsers */
+.about-right::-webkit-scrollbar {
+  background-color: transparent;
+}
+
+.about-right::-webkit-scrollbar-thumb {
+  background-color: #0d1f1d;
+  border-radius: 7px;
+}
+/*  */
+
+/* projects scroll bar for firefox on windows */
+.about-right {
+  scrollbar-color: #0d1f1d transparent;
+}
+/*  */
+
 button {
   font-family: "Montserrat", sans-serif;
   background-color: #e2b0c6;
@@ -159,7 +180,7 @@ button:hover {
 }
 
 footer {
-  background-image: url("/images/clouds.png");
+  background-image: url(/images/clouds.png);
   width: 100%;
   height: 75px;
   z-index: 1;
@@ -237,9 +258,12 @@ footer {
 }
 
 /* large ipad */
-@media (min-width: 1024px) and (max-width: 1406px) {
-  .about {
+@media (min-width: 768px) and (max-width: 1406px) {
+  .about-right {
     height: 800px;
+  }
+  .grad-bg {
+    height: fit-content;
   }
 }
 
