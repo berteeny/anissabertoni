@@ -321,7 +321,7 @@ footer {
   .about-left,
   .about-right {
     padding: 0rem 2.5rem;
-    width: 80%;
+    width: auto;
   }
 
   h5 {
